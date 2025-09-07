@@ -1,1 +1,201 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devavrat Verma — Portfolio</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+</head>
+<body class="bg-gradient-to-b from-slate-100 via-slate-200 to-slate-100 text-slate-900 font-sans dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 dark:text-slate-100 transition-colors duration-500">
+  <main class="max-w-6xl mx-auto p-6 space-y-12">
+    <!-- Theme Toggle -->
+    <div class="flex justify-end">
+      <button id="theme-toggle" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 transition">
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden dark:inline" fill="currentColor" viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.8 1.42-1.42zM1 13h3v-2H1v2zm10-9h2V1h-2v3zm9.66 2.46l-1.41-1.41-1.8 1.79 1.41 1.41 1.8-1.79zM17 13h3v-2h-3v2zm-5 8h2v-3h-2v3zm-7.07-3.93l-1.8 1.79 1.41 1.41 1.8-1.79-1.41-1.41zM12 7a5 5 0 100 10 5 5 0 000-10z"/></svg>
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M9.37 5.51A7 7 0 0012 19a7 7 0 006.49-9.37c-.2-.53-.84-.67-1.26-.25a5.001 5.001 0 01-7.61 0c-.42-.42-1.06-.28-1.25.25z"/></svg>
+        <span class="text-sm font-medium">Toggle Theme</span>
+      </button>
+    </div>
+
+    <!-- Hero -->
+    <header class="flex flex-col md:flex-row items-center gap-6 fade-section">
+      <img src="assets/photo.jpg" alt="Devavrat Verma" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-emerald-500 shadow-2xl hover:scale-110 transition-transform duration-500">
+      <div>
+        <h1 class="text-4xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 to-blue-500 bg-clip-text text-transparent">Devavrat Verma</h1>
+        <p class="text-slate-600 dark:text-slate-300 mt-1 text-lg">Versatile Software Engineer — Full Stack (MERN) & Android</p>
+        <p class="mt-4 text-slate-700 dark:text-slate-200 max-w-2xl">Software Engineer with expertise in building scalable full-stack (MERN) apps, Android apps with Jetpack Compose, and AI/ML prototypes. Strong background in competitive programming: LeetCode Knight (2030+), active on Codeforces, CodeChef, and GeeksforGeeks. Passionate about pushing boundaries with technology.</p>
+        <div class="flex gap-3 mt-6 flex-wrap">
+          <!-- Email -->
+          <a href="mailto:devavratverma30@gmail.com" class="flex items-center gap-2 px-5 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            Email
+          </a>
+          <!-- Contact -->
+          <a href="#contact" class="flex items-center gap-2 px-5 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0-1.657-1.343-3-3-3S6 9.343 6 11s1.343 3 3 3 3-1.343 3-3zM19 11c0-1.657-1.343-3-3-3s-3 1.343-3 3 1.343 3 3 3 3-1.343 3-3z"/></svg>
+            Contact
+          </a>
+          <!-- Resume -->
+          <a href="Resume-Devavrat-Verma.docx" download class="flex items-center gap-2 px-5 py-2 rounded-lg bg-gradient-to-r from-emerald-400 to-blue-500 text-slate-900 font-semibold hover:from-emerald-300 hover:to-blue-400 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+            Resume
+          </a>
+          <!-- GitHub -->
+          <a href="https://github.com/Dev-Leet" target="_blank" class="flex items-center gap-2 px-5 py-2 rounded-lg bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .5C5.649.5.5 5.648.5 12c0 5.086 3.292 9.387 7.865 10.905.575.105.785-.25.785-.556 0-.274-.01-1-.016-1.963-3.198.695-3.873-1.54-3.873-1.54-.523-1.33-1.278-1.687-1.278-1.687-1.044-.714.08-.699.08-.699 1.153.081 1.76 1.184 1.76 1.184 1.026 1.757 2.69 1.25 3.345.956.103-.743.402-1.25.73-1.539-2.552-.29-5.234-1.276-5.234-5.68 0-1.255.449-2.28 1.184-3.084-.119-.29-.513-1.457.112-3.04 0 0 .965-.309 3.162 1.178a11.045 11.045 0 0 1 2.88-.388c.977.004 1.962.132 2.88.388 2.196-1.487 3.16-1.178 3.16-1.178.627 1.583.233 2.75.114 3.04.737.804 1.183 1.829 1.183 3.084 0 4.414-2.686 5.387-5.248 5.672.414.356.784 1.066.784 2.148 0 1.55-.015 2.799-.015 3.18 0 .309.208.666.79.554C20.71 21.383 24 17.084 24 12c0-6.352-5.148-11.5-12-11.5z"/></svg>
+            GitHub
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/devavrat-verma/" target="_blank" class="flex items-center gap-2 px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.77 0-5 2.23-5 5v14c0 2.771 2.23 5 5 5h14c2.77 0 5-2.229 5-5v-14c0-2.77-2.23-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764 0-.975.784-1.768 1.75-1.768s1.75.793 1.75 1.768c0 .974-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-1.336-.025-3.059-1.861-3.059-1.861 0-2.146 1.452-2.146 2.957v5.706h-3v-11h2.879v1.507h.041c.401-.759 1.379-1.559 2.837-1.559 3.033 0 3.591 1.997 3.591 4.594v6.458z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section class="bg-slate-200 dark:bg-slate-800/60 backdrop-blur rounded-2xl shadow-xl p-8 fade-section">
+      <h2 class="text-2xl font-bold mb-3">About Me</h2>
+      <p>Full-stack and Android engineer with hands-on experience building scalable services, AI-powered features, and sleek mobile apps. Experienced in MERN, Kotlin, Jetpack Compose, and machine learning with Python. Adept at leading projects and collaborating in teams.</p>
+    </section>
+
+    <!-- Projects -->
+    <section class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
+      <h2 class="text-2xl font-bold mb-4">Projects</h2>
+      <div class="space-y-6">
+        <article class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/40 shadow hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="font-semibold">Online Judge Project</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">June 2025 – August 2025 • MERN, AI APIs, Docker, AWS</p>
+          <p class="mt-2">Built and deployed a full-stack online coding judge with AI-powered feedback, multi-language execution, Docker sandboxing, and Node.js/Express APIs. Deployed on AWS.</p>
+          <a href="https://github.com/Dev-Leet/online-judge" target="_blank" class="inline-block mt-3 text-emerald-500 hover:underline">View on GitHub</a>
+        </article>
+        <article class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/40 shadow hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="font-semibold">PocketPages — Notes App</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">May 2025 – June 2025 • Kotlin, Jetpack Compose</p>
+          <p class="mt-2">Offline-first note-taking app with authentication, MVVM, and polished UI. Won 2nd place in AndroidXplore Hackathon.</p>
+          <a href="https://github.com/Dev-Leet/pocketpages" target="_blank" class="inline-block mt-3 text-emerald-500 hover:underline">View on GitHub</a>
+        </article>
+        <article class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/40 shadow hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="font-semibold">Screen Dimmer Desktop App</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">March 2025 – April 2025 • C#, .NET</p>
+          <p class="mt-2">Utility to reduce screen brightness below system defaults using C# Windows Forms overlay technique. Improved accessibility and usability.</p>
+          <a href="https://github.com/Dev-Leet/screen-dimmer" target="_blank" class="inline-block mt-3 text-emerald-500 hover:underline">View on GitHub</a>
+        </article>
+        <article class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/40 shadow hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="font-semibold">Document Analysis using LLMs</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Feb 2025 – Mar 2025 • Python, Hugging Face</p>
+          <p class="mt-2">Summarization + Q&A pipeline using transformers and NLTK preprocessing. Built as a team prototype.</p>
+          <a href="https://github.com/Dev-Leet/doc-analysis-llm" target="_blank" class="inline-block mt-3 text-emerald-500 hover:underline">View on GitHub</a>
+        </article>
+        <article class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/40 shadow hover:scale-[1.02] transition-transform duration-300">
+          <h3 class="font-semibold">House Price Prediction Model</h3>
+          <p class="text-sm text-slate-500 dark:text-slate-400">Oct 2024 – Dec 2024 • Python, Scikit-learn</p>
+          <p class="mt-2">Regression model with feature engineering, predicting house prices with ~80% accuracy.</p>
+          <a href="https://github.com/Dev-Leet/house-price-prediction" target="_blank" class="inline-block mt-3 text-emerald-500 hover:underline">View on GitHub</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
+      <h2 class="text-2xl font-bold mb-3">Experience</h2>
+      <h3 class="font-semibold">Android App Development Intern — Imarticus Learning</h3>
+      <p class="text-sm text-slate-500 dark:text-slate-400">May 2025 – June 2025</p>
+      <ul class="list-disc ml-6 mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+        <li>Developed and maintained Android apps using Kotlin and Jetpack Compose.</li>
+        <li>Applied MVVM for scalable architecture; collaborated via Git and code reviews.</li>
+      </ul>
+    </section>
+
+
+    <section class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
+      <h2 class="text-2xl font-bold mb-3">Education</h2>
+      <div>
+        <h3 class="font-semibold">VIT Bhopal — B.Tech CSE</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Sep 2023 – Present • CGPA: 8.38</p>
+      </div>
+      <div class="mt-4">
+        <h3 class="font-semibold">The Aryan International School</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Completed June 2022 • 12th: 77.60% | 10th: 86.67%</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
+      <h2 class="text-2xl font-bold mb-3">Skills</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 text-slate-700 dark:text-slate-300">
+        <li>JavaScript / TypeScript</li>
+        <li>React.js, Node.js, Express.js</li>
+        <li>MongoDB, SQL</li>
+        <li>Kotlin, Jetpack Compose</li>
+        <li>Python (ML, AI, Data Science)</li>
+        <li>C, C++</li>
+        <li>Docker, AWS basics</li>
+        <li>Git, GitHub, CI/CD</li>
+      </ul>
+    </section>
+
+    <!-- Competitive Programming -->
+    <section class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
+      <h2 class="text-2xl font-bold mb-3">Competitive Programming</h2>
+      <div class="flex flex-wrap gap-4">
+        <a href="https://leetcode.com/Devavrat30/" target="_blank" class="px-4 py-2 rounded-lg bg-orange-500 text-white hover:bg-orange-400">LeetCode</a>
+        <a href="https://codeforces.com/profile/Dev-Leet" target="_blank" class="px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-400">Codeforces</a>
+        <a href="https://www.codechef.com/users/devavrat30" target="_blank" class="px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-500">CodeChef</a>
+        <a href="https://auth.geeksforgeeks.org/user/devavrat30" target="_blank" class="px-4 py-2 rounded-lg bg-green-600 text-white hover:bg-green-500">GeeksforGeeks</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
+      <h2 class="text-2xl font-bold mb-3">Contact</h2>
+      <p>Email: <a href="mailto:devavratverma30@gmail.com" class="text-emerald-500 hover:underline">devavratverma30@gmail.com</a></p>
+      <form class="mt-4 space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
+        <input type="email" placeholder="Your Email" class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
+        <textarea placeholder="Your Message" class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700"></textarea>
+        <button type="submit" class="px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-400">Send</button>
+      </form>
+    </section>
+
+    <footer class="text-center py-6 text-slate-600 dark:text-slate-500 text-sm">© Devavrat Verma — Built with Tailwind CSS, icons, scroll animations & theme toggle</footer>
+  </main>
+
+  <!-- Animations -->
+  <style>
+    .fade-section { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
+    .fade-section.visible { opacity: 1; transform: translateY(0); }
+  </style>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-section').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Theme toggle with localStorage
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
+    if (localStorage.getItem('theme') === 'light') {
+      htmlEl.classList.remove('dark');
+    }
+    toggleBtn.addEventListener('click', () => {
+      htmlEl.classList.toggle('dark');
+      localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>
 
