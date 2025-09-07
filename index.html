@@ -155,18 +155,23 @@
     <section id="contact" class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
       <h2 class="text-2xl font-bold mb-3">Contact</h2>
       <p>Email: <a href="mailto:devavratverma30@gmail.com" class="text-emerald-500 hover:underline">devavratverma30@gmail.com</a></p>
-      <form class="mt-4 space-y-4">
-        <input type="text" placeholder="Your Name" class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
-        <input type="email" placeholder="Your Email" class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
-        <textarea placeholder="Your Message" class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700"></textarea>
+
+      <!-- Functional Form with Formspree -->
+      <form action="https://formspree.io/f/movnynnn" method="POST" class="mt-4 space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700">
+        <textarea name="message" placeholder="Your Message" required class="w-full p-2 rounded bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700"></textarea>
+        
+        <!-- Hidden honeypot for spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+
         <button type="submit" class="px-4 py-2 rounded bg-emerald-500 text-white hover:bg-emerald-400">Send</button>
       </form>
     </section>
 
-    <footer class="text-center py-6 text-slate-600 dark:text-slate-500 text-sm">© Devavrat Verma - 2025</footer>
+    <footer class="text-center py-6 text-slate-600 dark:text-slate-500 text-sm">© Devavrat Verma — Built with Tailwind CSS, icons, scroll animations & theme toggle</footer>
   </main>
 
-  <!-- Animations -->
   <style>
     .fade-section { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
     .fade-section.visible { opacity: 1; transform: translateY(0); }
@@ -191,13 +196,15 @@
     if (localStorage.getItem('theme') === 'light') {
       htmlEl.classList.remove('dark');
     }
-    toggleBtn.addEventListener('click', () => {
+    toggleBtn?.addEventListener('click', () => {
       htmlEl.classList.toggle('dark');
       localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
     });
   </script>
 </body>
 </html>
+
+
 
 
 
