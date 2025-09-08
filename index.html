@@ -233,7 +233,7 @@
         const minute = map.minute || '00';
         const second = map.second || '00';
 
-        el.textContent = `${pad(hour)}:${pad(minute)}:${pad(second)}, ${day} ${month} ${year}, `;
+        el.textContent = ` ${month} ${day},  ${year}, ${pad(hour)}:${pad(minute)}:${pad(second)} `;
       }
 
       update();
@@ -242,6 +242,7 @@
   </script>
 </body>
 </html>
+
 
 
 
