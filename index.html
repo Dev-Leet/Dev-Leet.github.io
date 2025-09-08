@@ -169,7 +169,9 @@
       </form>
     </section>
 
-    <footer class="text-center py-6 text-slate-600 dark:text-slate-500 text-sm">© Devavrat Verma - September 2025</footer>
+    <footer class="text-center py-6 text-slate-600 dark:text-slate-500 text-sm">
+      © Devavrat Verma — <span id="current-time" aria-live="polite">Loading time…</span>
+    </footer>
   </main>
 
   <style>
@@ -200,9 +202,47 @@
       htmlEl.classList.toggle('dark');
       localStorage.setItem('theme', htmlEl.classList.contains('dark') ? 'dark' : 'light');
     });
+
+    // Live clock in Asia/Kolkata timezone
+    (function startFooterClock() {
+      const el = document.getElementById('current-time');
+      if (!el) return;
+
+      function pad(n) { return n.toString().padStart(2, '0'); }
+
+      function update() {
+        const now = new Date();
+        const parts = new Intl.DateTimeFormat('en-US', {
+          timeZone: 'Asia/Kolkata',
+          year: 'numeric',
+          month: 'long',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        }).formatToParts(now);
+
+        const map = {};
+        parts.forEach(p => { map[p.type] = p.value; });
+
+        const year = map.year || '';
+        const month = map.month || '';
+        const day = map.day || '';
+        const hour = map.hour || '00';
+        const minute = map.minute || '00';
+        const second = map.second || '00';
+
+        el.textContent = `${year} ${month} ${day}, ${pad(hour)}:${pad(minute)}:${pad(second)}`;
+      }
+
+      update();
+      setInterval(update, 1000);
+    })();
   </script>
 </body>
 </html>
+
 
 
 
