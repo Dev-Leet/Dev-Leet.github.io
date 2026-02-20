@@ -61,7 +61,16 @@
     <!-- About -->
     <section class="bg-slate-200 dark:bg-slate-800/60 backdrop-blur rounded-2xl shadow-xl p-8 fade-section">
       <h2 class="text-2xl font-bold mb-3">About Me</h2>
-      <p>Full-stack and Android engineer with hands-on experience building scalable services, AI-powered features, and sleek mobile apps. Experienced in MERN, Kotlin, Jetpack Compose, and machine learning with Python. Adept at leading projects and collaborating in teams.</p>
+      <p class="mb-6">Full-stack and Android engineer with hands-on experience building scalable services, AI-powered features, and sleek mobile apps. Experienced in MERN, Kotlin, Jetpack Compose, and machine learning with Python. Adept at leading projects and collaborating in teams.</p>
+      
+      <!-- Self Introduction Video added here -->
+      <div class="w-full max-w-3xl mx-auto aspect-video rounded-xl overflow-hidden shadow-lg border border-slate-300 dark:border-slate-700 bg-black">
+        <video controls class="w-full h-full object-cover">
+          <!-- Update the src attribute with the path to your video file on GitHub Pages -->
+          <source src="assets/self-introduction.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </section>
 
     <!-- Projects -->
@@ -103,13 +112,33 @@
 
     <!-- Experience -->
     <section class="bg-slate-200 dark:bg-slate-800/60 rounded-2xl shadow-xl p-8 fade-section">
-      <h2 class="text-2xl font-bold mb-3">Experience</h2>
-      <h3 class="font-semibold">Android App Development Intern — Imarticus Learning</h3>
-      <p class="text-sm text-slate-500 dark:text-slate-400">May 2025 – June 2025</p>
-      <ul class="list-disc ml-6 mt-2 space-y-1 text-slate-700 dark:text-slate-300">
-        <li>Developed and maintained Android apps using Kotlin and Jetpack Compose.</li>
-        <li>Applied MVVM for scalable architecture; collaborated via Git and code reviews.</li>
-      </ul>
+    <h2 class="text-2xl font-bold mb-4">Experience</h2>
+
+    <div class="space-y-6">
+
+        <!-- Imarticus Learning -->
+        <article class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/40 shadow hover:scale-[1.02] transition-transform duration-300">
+        <h3 class="font-semibold">Android App Development Intern — Imarticus Learning</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400">May 2025 – June 2025</p>
+        <ul class="list-disc ml-6 mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+            <li>Developed and maintained Android apps using Kotlin and Jetpack Compose.</li>
+            <li>Applied MVVM architecture for scalable app design.</li>
+            <li>Collaborated via Git, code reviews, and agile workflows.</li>
+        </ul>
+        </article>
+
+        <!-- IIT Ropar -->
+        <article class="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/40 shadow hover:scale-[1.02] transition-transform duration-300">
+        <h3 class="font-semibold">Virtual Research Intern — IIT Ropar</h3>
+        <p class="text-sm text-slate-500 dark:text-slate-400">Dec 2025 – Jan 2026</p>
+        <ul class="list-disc ml-6 mt-2 space-y-1 text-slate-700 dark:text-slate-300">
+            <li>Worked on research-oriented technical assignments in a structured Full-time Virtual internship program.</li>
+            <li>Applied system design and analytical problem-solving principles in MERN Stack.</li>
+            <li>Collaborated remotely while following professional engineering practices.</li>
+        </ul>
+        </article>
+
+    </div>
     </section>
 
 
