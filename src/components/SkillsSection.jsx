@@ -4,14 +4,23 @@ import { skills, competitiveProgramming } from '../data/portfolioData';
 
 const SkillsSection = () => {
   return (
-    <section className="py-20 px-6 md:px-12 lg:px-24 w-full overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="glass rounded-3xl p-8 md:p-12 text-center relative"
-      >
+    <section className="py-24 relative overflow-hidden">
+      {/* Parallax Background specifically for this section */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-fixed bg-center opacity-30 dark:opacity-40"
+        style={{ backgroundImage: 'url(/assets/TechnicalArsensalBackground.png)' }}
+      ></div>
+      {/* Gradient fade on top and bottom */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50 dark:from-black dark:via-transparent dark:to-black"></div>
+
+      <div className="relative z-10 px-6 md:px-12 lg:px-24 w-full">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="glass rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
+        >
         <h2 className="text-3xl font-bold mb-8">Technical Arsenal</h2>
         
         {/* Skills Pills */}
@@ -52,7 +61,8 @@ const SkillsSection = () => {
             </a>
           ))}
         </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 };
