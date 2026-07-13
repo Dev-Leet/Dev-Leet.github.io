@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 
+type GridCellInfo = { el: HTMLDivElement; cx: number; cy: number; maxZ: number };
+
 export default function InteractiveGrid() {
   const [grid, setGrid] = useState({ cols: 0, rows: 0 });
-  const cellsRef = useRef([]);
-  const gridInfo = useRef([]); // Stores pre-calculated cell coordinates for performance
-  const containerRef = useRef(null); // Reference for the main 3D wall
+  const cellsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const gridInfo = useRef<(GridCellInfo | null)[]>([]); // Stores pre-calculated cell coordinates for performance
+  const containerRef = useRef<HTMLDivElement | null>(null); // Reference for the main 3D wall
 
   // Configuration for the grid and interaction
   const CELL_SIZE = 50; // Size of each grid square in pixels
@@ -55,7 +57,7 @@ export default function InteractiveGrid() {
       return;
     }
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
 
       if (containerRef.current) {
@@ -102,7 +104,7 @@ export default function InteractiveGrid() {
           cell.el.style.borderWidth = `${1 + (intensity * 2)}px`;
           // Glowing shadows heavily concentrated on the outer and inner edges of the border
           cell.el.style.boxShadow = `0 0 ${25 * intensity}px rgba(45, 212, 191, ${intensity * 0.8}), inset 0 0 ${20 * intensity}px rgba(45, 212, 191, ${intensity * 0.9})`;
-          cell.el.style.zIndex = Math.round(intensity * 100);
+          cell.el.style.zIndex = `${Math.round(intensity * 100)}`;
         } else {
           // Reset styles immediately when mouse leaves radius
           cell.el.style.transform = `translateZ(0px) scale(1) rotateX(0deg) rotateY(0deg)`;
@@ -110,7 +112,7 @@ export default function InteractiveGrid() {
           cell.el.style.borderColor = `rgba(255, 255, 255, 0.06)`; // Subtly brighter base grid lines
           cell.el.style.borderWidth = `1px`;
           cell.el.style.boxShadow = `none`;
-          cell.el.style.zIndex = 1;
+          cell.el.style.zIndex = '1';
         }
       });
     };
@@ -153,7 +155,7 @@ export default function InteractiveGrid() {
         {Array.from({ length: totalCells }).map((_, i) => (
           <div
             key={i}
-            ref={(el) => (cellsRef.current[i] = el)}
+            ref={(el) => { cellsRef.current[i] = el; }}
             // Added a slight background fill to default cells to make them look like physical panels
             className="border border-white/[0.06] bg-white/[0.01] transition-all duration-200 ease-out will-change-transform"
             style={{
