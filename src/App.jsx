@@ -7,12 +7,12 @@ import ExperienceTimeline from './components/ExperienceTimeline';
 import SkillsSection from './components/SkillsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
+import InteractiveGrid from './interactive_grid_background';
 
 function App() {
   return (
     <div className="min-h-screen selection:bg-emerald-500/30 relative text-slate-900 dark:text-neutral-100">
-      <CustomCursor />
+      <InteractiveGrid />
       <Navbar />
       
       <main className="space-y-12 relative z-10">
