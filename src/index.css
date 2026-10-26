@@ -7,8 +7,12 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-slate-50 text-slate-900 transition-colors duration-500;
+    @apply bg-slate-50 text-slate-900 transition-colors duration-500 overflow-x-hidden;
   }
   
   .dark body {

@@ -1,17 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { skills, competitiveProgramming } from '../data/portfolioData';
 
 const SkillsSection = () => {
+  const sectionRef = useRef(null);
+  const bgRef = useRef(null);
+
+  useEffect(() => {
+    let rafId = 0;
+    const updateParallax = () => {
+      if (!sectionRef.current || !bgRef.current) return;
+      const rect = sectionRef.current.getBoundingClientRect();
+      const viewH = window.innerHeight || 1;
+      const centerOffset = (rect.top + rect.height / 2 - viewH / 2) / viewH;
+      const translateY = Math.max(-80, Math.min(80, centerOffset * -85));
+      bgRef.current.style.transform = `translate3d(0, ${translateY.toFixed(1)}px, 0) scale(1.12)`;
+    };
+
+    const onScroll = () => {
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(updateParallax);
+    };
+
+    updateParallax();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
+
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Parallax Background specifically for this section */}
+    <section ref={sectionRef} className="py-24 relative overflow-hidden">
+      {/* Scroll-reactive Parallax Background specifically for this section */}
       <div 
-        className="absolute inset-0 z-0 bg-cover bg-fixed bg-center opacity-30 dark:opacity-40"
+        ref={bgRef}
+        className="absolute -inset-12 z-0 bg-cover bg-center opacity-20 dark:opacity-25 pointer-events-none will-change-transform"
         style={{ backgroundImage: 'url(/assets/TechnicalArsensalBackground.png)' }}
       ></div>
-      {/* Gradient fade on top and bottom */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-b from-slate-50 via-transparent to-slate-50 dark:from-black dark:via-transparent dark:to-black"></div>
+      {/* Translucent gradient fade on top and bottom */}
+      <div className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-b from-slate-50/70 via-transparent to-slate-50/70 dark:from-black/70 dark:via-transparent dark:to-black/70"></div>
 
       <div className="relative z-10 px-6 md:px-12 lg:px-24 w-full">
         <motion.div
