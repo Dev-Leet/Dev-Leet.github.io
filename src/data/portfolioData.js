@@ -98,13 +98,19 @@ export const education = [
     institution: "Vellore Institute of Technology, Bhopal",
     degree: "B.Tech CSE",
     date: "Sep 2023 – Present",
-    score: "CGPA: 8.40"
+    score: "8.40/10"
   },
   {
     institution: "The Aryan International School",
-    degree: "High School",
-    date: "Completed June 2022",
-    score: "12th: 77.60% | 10th: 86.67%"
+    degree: "Higher Secondary (12th)",
+    date: "Completed - July 2022",
+    score: "77.60% "
+  },
+  {
+    institution: "The Aryan International School",
+    degree: "Secondary School (10th)",
+    date: "Completed - July 2020",
+    score: "86.67%"
   }
 ];
 
