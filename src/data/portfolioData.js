@@ -3,7 +3,7 @@ import React from 'react';
 export const personalInfo = {
   name: "Devavrat Verma",
   role: "Versatile Software Engineer — Full Stack (MERN) & AI/ML",
-  description: "Software Engineer with expertise in building scalable full-stack (MERN) apps, Android apps with Jetpack Compose, and AI/ML prototypes. Strong background in competitive programming: LeetCode Knight (2030+), active on Codeforces, CodeChef, and GeeksforGeeks. Passionate about pushing boundaries with technology.",
+  description: "Software Engineer with expertise in building scalable full-stack (MERN) apps, Android apps with Jetpack Compose, and AI/ML prototypes. Strong background in competitive programming: LeetCode Guardian (2193+), active on Codeforces, CodeChef, and GeeksforGeeks. Passionate about pushing boundaries with technology.",
   email: "devavratverma30@gmail.com",
   github: "https://github.com/Dev-Leet",
   linkedin: "https://www.linkedin.com/in/devavrat-verma/",
@@ -15,7 +15,7 @@ export const personalInfo = {
 
 export const aboutMe = {
   title: "About Me",
-  description: "Full-stack and Android engineer with hands-on experience building scalable services, AI-powered features, and sleek mobile apps. Experienced in MERN, Kotlin, Jetpack Compose, and machine learning with Python. Adept at leading projects and collaborating in teams."
+  description: "Full-stack and AI/ML engineer with hands-on experience building scalable services, AI-powered features, and sleek mobile apps. Experienced in MERN, Kotlin, Jetpack Compose, and machine learning with Python. Adept at leading projects and collaborating in teams."
 };
 
 export const projects = [
@@ -65,6 +65,15 @@ export const projects = [
 
 export const experience = [
   {
+    title: "Advanced Software Engineering & Development Intern — MPOnline Limited",
+    date: "May 2026 – July 2026",
+    bullets: [
+      "Built a strong technical foundation encompassing OOPS, Database Management, and MVC architecture in a Part-time Virtual internship program.",
+      "Applied core software engineering practices by developing application, and exploring testing methodologies.",
+      "Executed key SDLC phases culminating in the successful development, submission of Task Management System."
+    ]
+  },
+  {
     title: "Virtual Research Intern — IIT Ropar",
     date: "Dec 2025 – Jan 2026",
     bullets: [
@@ -86,10 +95,10 @@ export const experience = [
 
 export const education = [
   {
-    institution: "VIT Bhopal",
+    institution: "Vellore Institute of Technology, Bhopal",
     degree: "B.Tech CSE",
     date: "Sep 2023 – Present",
-    score: "CGPA: 8.36"
+    score: "CGPA: 8.40"
   },
   {
     institution: "The Aryan International School",
